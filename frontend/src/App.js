@@ -6,7 +6,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "./app.css";
 
 import axios from "axios";
-import { format } from "timeago.js";
+// import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
@@ -132,7 +132,7 @@ function App() {
                   <span className="username">
                     Created by <b>{pin.username}</b>
                   </span>
-                  <span className="date">{format(pin.createdAt)}</span>
+                  {/* <span className="date">{format(pin.createdAt)}</span> */}
                 </div>
               </Popup>
             )}
