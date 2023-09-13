@@ -43,6 +43,8 @@ function App() {
     getPins();
   }, []);
 
+  console.log(pins);
+
   const handleMarkerClick = (id, lat, lng) => {
     setCurrentPlaceId(id);
     setViewport({ ...viewport, latitude: lat, longitude: lng });
