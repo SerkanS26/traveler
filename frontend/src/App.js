@@ -31,7 +31,9 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("/pins");
+        const res = await axios.get(
+          "https://traveler-api.up.railway.app/api/pins"
+        );
 
         setPins(res.data);
       } catch (error) {
@@ -65,7 +67,10 @@ function App() {
       lng: newPlace.lng,
     };
     try {
-      const res = await axios.post("/pins", newPin);
+      const res = await axios.post(
+        "https://traveler-api.up.railway.app/api/pins",
+        newPin
+      );
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (error) {

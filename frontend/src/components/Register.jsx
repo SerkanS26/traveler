@@ -21,7 +21,10 @@ function Register({ setShowRegister }) {
     };
 
     try {
-      await axios.post("/users/register", newUser);
+      await axios.post(
+        "https://traveler-api.up.railway.app/api/users/register",
+        newUser
+      );
       setError(false);
       setSuccess(true);
     } catch (err) {
